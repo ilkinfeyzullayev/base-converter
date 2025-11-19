@@ -1,0 +1,111 @@
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+}
+
+.logo {
+  font-family: "Roboto Mono", monospace;
+  color: var(--white);
+  font-size: 2.5em;
+  text-shadow: 1px 1px 5px black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+  max-width: fit-content;
+  margin: auto;
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 2em 1.5em 2em 1.5em;
+  box-shadow: 1px 1px 7.5px black;
+}
+
+.input-container,
+.output-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.inputs,
+.outputs {
+  display: flex;
+  gap: 2em;
+}
+
+label {
+  font-size: 1.25em;
+  font-family: "Roboto Mono", monospace;
+}
+
+input {
+  font-size: 2em;
+  border-radius: 1rem;
+  border: 1.5px solid var(--gray);
+  font-family: inherit;
+  color: var(--dark-gray);
+  text-transform: uppercase;
+}
+
+select {
+  display: flex;
+  min-inline-size: 8ch;
+  justify-content: space-between;
+
+  &,
+  &::picker(select) {
+    appearance: base-select;
+    font-family: inherit;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    line-height: 1.6;
+  }
+
+  &::picker(select) {
+    margin-block-start: 0.5rem;
+  }
+
+  &::picker-icon {
+    display: none;
+  }
+
+  .picker {
+    transition: rotate 0.6s ease;
+
+    :open & {
+      rotate: 360deg;
+    }
+  }
+}
+
+.copy-btn {
+  margin: auto;
+  font-family: inherit;
+  cursor: pointer;
+  max-width: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  background: #0fd6e0;
+  background: linear-gradient(
+    rgba(15, 214, 224, 1) 0%,
+    rgba(34, 255, 143, 1) 100%
+  );
+  box-shadow: 1px 1px 7.5px black;
+}
+
+.copy-btn:hover {
+  filter: brightness(0.95);
+}
+
+.copy-btn:active {
+  filter: brightness(0.9);
+}

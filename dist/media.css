@@ -1,0 +1,95 @@
+/* Small phones */
+@media (max-width: 400px) {
+  .container {
+    padding: 1.5em 1.25em 1.5em 1.25em;
+  }
+
+  input {
+    font-size: 1.2em;
+  }
+
+  select {
+    min-inline-size: 2ch;
+
+    &,
+    &::picker(select) {
+      padding: 0.5rem;
+    }
+  }
+}
+
+/* Medium phones */
+@media (min-width: 401px) and (max-width: 600px) {
+  .container {
+    padding: 1.75em 1.5em 1.75em 1.5em;
+  }
+
+  input {
+    font-size: 1.3em;
+  }
+
+  select {
+    min-inline-size: 4ch;
+
+    &,
+    &::picker(select) {
+      padding: 0.5rem;
+    }
+  }
+}
+
+/* Large phones / small tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+  .logo-container {
+    margin-bottom: 15vh;
+  }
+
+  .container {
+    padding: 2.5em 2em 2.5em 2em;
+  }
+
+  input {
+    font-size: 2.25em;
+  }
+
+  select {
+    min-inline-size: 8ch;
+
+    &,
+    &::picker(select) {
+      padding: 1rem;
+    }
+  }
+
+  .copy-btn {
+    padding: 1.5rem 1.75rem 1.5rem 1.75rem;
+  }
+}
+
+/* Standard tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .logo-container {
+    margin-bottom: 20vh;
+  }
+
+  .container {
+    padding: 3em 2.75em 3em 2.75em;
+  }
+
+  input {
+    font-size: 2.5em;
+  }
+
+  select {
+    min-inline-size: 10ch;
+
+    &,
+    &::picker(select) {
+      padding: 1.5rem;
+    }
+  }
+
+  .copy-btn {
+    padding: 1.75rem 2rem 1.75rem 2rem;
+  }
+}
