@@ -49,9 +49,9 @@ outputBase.addEventListener("change", function () {
   }
 });
 
-numberInput.addEventListener("keydown", function (e) {
-  const valid = regExInput.test(e.key);
-  if (e.key != "Backspace" && !valid) {
+numberInput.addEventListener("beforeinput", function (e) {
+  const valid = regExInput.test(e.data);
+  if (e.inputType != "deleteContentBackward" && !valid) {
     e.preventDefault();
   }
 });
